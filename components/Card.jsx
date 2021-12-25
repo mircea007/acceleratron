@@ -13,9 +13,9 @@ export default function Card( props ) {
   return (
     <div className="rounded-md shadow-md bg-white flex flex-row overflow-hidden">
       <div class="flex flex-col gap-2 p-4">
-        <h1 className="text-center text-2xl uppercase font-semibold">{ props.title }</h1>
+        <h1 className="text-center text-2xl font-semibold">{ props.title }</h1>
         <hr className="border-gray-200"/>
-        { hasSubTitle ? <h2 className="uppercase text-xl font-bold text-blue-500">{ props.subTitle }</h2> : null}
+        { hasSubTitle ? <h2 className="uppercase text-lg font-bold text-blue-500">{ props.subTitle }</h2> : null}
         { props.children }
       </div>
     </div>
