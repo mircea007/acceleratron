@@ -4,7 +4,6 @@ This is the source code for the page dedicated for the YT questions browser exte
 
 ## TODO LIST
 
-* network background
 * hero section text
 * roadmap
 * team section
