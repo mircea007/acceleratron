@@ -2,7 +2,7 @@ import Particles from 'react-tsparticles'
 import Card from '../components/Card.jsx'
 import RandomPic from '../components/RandomPic.jsx'
 import TimeLine from '../components/TimeLine.jsx'
-import BigButton from '../components/BigButton.jsx'
+import { DownloadButton, SimpleButton } from '../components/Buttons.jsx'
 
 export default function Home() {
   const particlesInit = (main) => {
@@ -60,7 +60,10 @@ export default function Home() {
               This is why we have decided to make this simple browser extension to help you actually remember
               what you just saw, and not just forget about it five minutes later.
             </p>
-            <BigButton browser="Chrome" version="0.0.1" download="https://chrome.google.com/webstore/category/extensions" github="https://github.com/mircea007/acceleratron" />
+            <div className="mt-4 flex flex-row justify-center gap-4">
+              <DownloadButton className="flex-shrink-0" browser="Chrome" version="0.0.1" download="https://chrome.google.com/webstore/category/extensions" github="https://github.com/mircea007/acceleratron" />
+              <SimpleButton className="flex-shrink-0" link="">Learn More</SimpleButton>
+            </div>
           </div>
         </div>
         {/* https://getwaves.io/ */}
