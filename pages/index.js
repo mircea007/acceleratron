@@ -1,15 +1,57 @@
+import Particles from 'react-tsparticles'
 import Card from '../components/Card.jsx'
 import RandomPic from '../components/RandomPic.jsx'
 import TimeLine from '../components/TimeLine.jsx'
 import BigButton from '../components/BigButton.jsx'
 
 export default function Home() {
+  const particlesInit = (main) => {
+    console.log(main);
+
+    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+  };
+
+  const particlesLoaded = (container) => {
+    console.log(container);
+  };
+  
+  const bgcol = "#111";
+  const fgcol = "#999";
+  
+  const particlesConfig = {
+    "background": {
+      "color": { "value": bgcol },
+      "position": "50% 50%",
+      "repeat": "no-repeat",
+      "size": "cover"
+    },
+    "fullScreen": {
+      "enable": false,
+      "zIndex": -1
+    },
+    "particles": {
+      "links": {
+        "distance": 150,
+        "enable": true,
+        "color": { "value": fgcol }
+      },
+      "move": {
+        "enable": true
+      },
+      "size": {
+        "value": 1
+      },
+      "color": { "value": fgcol }
+    }
+  }
+
   return (
     <div className="main font-sans scroll-smooth flex flex-col items-center bg-black"> {/* page container */}
     
       {/* intro section */}
       <div className="w-full h-[80vh] flex flex-col relative">
-        <div className="absolute inset-0 brightness-50 bg-gradient-to-br from-green-500 to-blue-500" />
+        {/*<div className="absolute inset-0 brightness-50 bg-gradient-to-br from-green-500 to-blue-500" />*/}
+        <Particles className="absolute inset-0" params={ particlesConfig}/>
         <div className="flex justify-center items-center w-full h-[65vh] z-10">
           <div className="max-w-2xl flex flex-col gap-4 p-8">
             <h1 className="w-full text-center pb-8 text-white text-8xl font-bold">Acceleratron</h1>
@@ -26,8 +68,8 @@ export default function Home() {
       </div>
       
       {/* explaining section */}
-      <h2 className="text-6xl w-full px-10 pt-6 pb-4 text-white">About the YouTube extension</h2>
-      <TimeLine className="w-full p-16">
+      <h2 className="text-6xl w-full px-10 pt-6 pb-4 text-white bg-black">About the YouTube extension</h2>
+      <TimeLine className="w-full p-16 bg-black">
         <div className="flex flex-row justify-between w-full pt-4 gap-4" imgUrl="https://picsum.photos/960/540">
           <div className="text-2xl text-justify text-white">
             When you watch a youtube video, a "questions" button will appear below your video.
@@ -53,8 +95,8 @@ export default function Home() {
       </TimeLine>
 
       {/* installing section */}
-      <h2 className="text-6xl w-full px-10 pt-6 pb-4 text-white">Roadmap</h2>
-      <TimeLine className="w-full p-16">
+      <h2 className="text-6xl w-full px-10 pt-6 pb-4 text-white bg-black">Roadmap</h2>
+      <TimeLine className="w-full p-16 bg-black">
         <div className="flex flex-row justify-between w-full pt-4 gap-4" imgUrl="https://picsum.photos/960/540">
           <div className="text-2xl text-justify text-white">
             Excepteur non adipisicing dolor reprehenderit anim sunt quis quis quis elit esse in dolor do eiusmod
