@@ -3,10 +3,9 @@
 @tailwind utilities;
 
 @layer base {
-  a {
+  .link {
     @apply text-blue-600 hover:italic;
   }
-  
 }
 
 @layer components {
