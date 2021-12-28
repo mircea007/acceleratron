@@ -3,6 +3,7 @@ import Card from '../components/Card.jsx'
 import RandomPic from '../components/RandomPic.jsx'
 import TimeLine from '../components/TimeLine.jsx'
 import WaveSplit from '../components/WaveSplit.jsx'
+import Profile from '../components/Profile.jsx'
 import { DownloadButton, BoringButton, BigButton, GitHubButton } from '../components/Buttons.jsx'
 
 export default function Home() {
@@ -158,6 +159,40 @@ export default function Home() {
           </div>
         </div>
       </TimeLine>
+      
+      {/* roadmap section */}
+      <div className="w-full h-screen relative flex flex-row justify-center items-center bg-gray-600">
+        <WaveSplit className="h-[15vh] w-full absolute top-0 z-10 -scale-100" />
+        <div className="text-white z-10">
+          <h2 className="text-8xl text-center font-semibold mb-10">Roadmap</h2>
+        </div>
+        <WaveSplit className="h-[15vh] w-full absolute bottom-0 z-10" />
+      </div>
+      
+      {/* team section */}
+      <div className="py-16 w-full">
+        <h2 className="text-6xl w-full px-10 pt-6 pb-4 text-white bg-black">Who are we?</h2>
+        <div className="flex flex-row items-center justify-evenly text-white py-8">
+          <Profile name="Tiberiu Mușat" role="Founder" img="https://people.epfl.ch/private/common/photos/links/344973.jpg?ts=1640704611">
+            <ul className="px-8 list-disc list-inside">
+              <li>40<sup>th</sup> place at the International Olympiad of Informatics</li>
+              <li>1<sup>st</sup> place at the National Olympiad of Informatics in Romania</li>
+              <li>creator of <a href="https://bacplus.ro" target="_blank" className="link">bacplus.ro</a></li>
+              <li>passions: reading, phylosophy, digital art</li>
+              <li>age: 19 years old</li>
+            </ul>
+          </Profile>
+          <Profile name="Mircea Rebengiuc" role="Co-Founder" reverse={true} img="https://avatars.githubusercontent.com/u/50020158?v=4">
+            <ul className="px-8 list-disc list-inside">
+              <li>Participated at international contests for Informatics and Physics</li>
+              <li>2<sup>nd</sup> place at the National Olympiad of Physics in Romania</li>
+              <li>creator of <a href="https://bacplus.ro" target="_blank" className="link">bacplus.ro</a></li>
+              <li>passions: tehnology, physics, programming</li>
+              <li>age: 14 years old</li>
+            </ul>
+          </Profile>
+        </div>
+      </div>
 
       {/* download section */}
       <div className="w-full h-[80vh] relative flex flex-row justify-center items-center">
@@ -187,6 +222,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       {/* footer */}
       <div className="flex flex-row w-full bg-black">
         <span className="font-semibold p-2">Acceleratron</span>
