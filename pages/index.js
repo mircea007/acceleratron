@@ -175,18 +175,20 @@ export default function Home() {
         <div className="flex flex-row items-center justify-evenly text-white py-8">
           <Profile name="Tiberiu Mușat" role="Founder" img="https://people.epfl.ch/private/common/photos/links/344973.jpg?ts=1640704611">
             <ul className="px-8 list-disc list-inside">
-              <li>abcdefoausdkajbsda</li>
-              <li>abcdefoausdkajbsda</li>
-              <li>abcdefoausdkajbsda</li>
-              <li>abcdefoausdkajbsda</li>
+              <li>40<sup>th</sup> place at the International Olympiad of Informatics</li>
+              <li>1<sup>st</sup> place at the National Olympiad of Informatics in Romania</li>
+              <li>creator of <a href="https://bacplus.ro" target="_blank" className="link">bacplus.ro</a></li>
+              <li>passions: reading, phylosophy, digital art</li>
+              <li>age: 19 years old</li>
             </ul>
           </Profile>
           <Profile name="Mircea Rebengiuc" role="Co-Founder" reverse={true} img="https://avatars.githubusercontent.com/u/50020158?v=4">
             <ul className="px-8 list-disc list-inside">
-              <li>abcdefoausdkajbsda</li>
-              <li>abcdefoausdkajbsda</li>
-              <li>abcdefoausdkajbsda</li>
-              <li>abcdefoausdkajbsda</li>
+              <li>Participated at international contests for Informatics and Physics</li>
+              <li>2<sup>nd</sup> place at the National Olympiad of Physics in Romania</li>
+              <li>creator of <a href="https://bacplus.ro" target="_blank" className="link">bacplus.ro</a></li>
+              <li>passions: tehnology, physics, programming</li>
+              <li>age: 14 years old</li>
             </ul>
           </Profile>
         </div>
