@@ -173,8 +173,22 @@ export default function Home() {
       <div className="py-16 w-full">
         <h2 className="text-6xl w-full px-10 pt-6 pb-4 text-white bg-black">Who are we?</h2>
         <div className="flex flex-row items-center justify-evenly text-white py-8">
-          <Profile name="Tiberiu Mușat" role="Founder" img="https://people.epfl.ch/private/common/photos/links/344973.jpg?ts=1640704611"/>
-          <Profile name="Mircea Rebengiuc" role="Co-Founder" img="https://avatars.githubusercontent.com/u/50020158?v=4"/>
+          <Profile name="Tiberiu Mușat" role="Founder" img="https://people.epfl.ch/private/common/photos/links/344973.jpg?ts=1640704611">
+            <ul className="px-8 list-disc list-inside">
+              <li>abcdefoausdkajbsda</li>
+              <li>abcdefoausdkajbsda</li>
+              <li>abcdefoausdkajbsda</li>
+              <li>abcdefoausdkajbsda</li>
+            </ul>
+          </Profile>
+          <Profile name="Mircea Rebengiuc" role="Co-Founder" reverse={true} img="https://avatars.githubusercontent.com/u/50020158?v=4">
+            <ul className="px-8 list-disc list-inside">
+              <li>abcdefoausdkajbsda</li>
+              <li>abcdefoausdkajbsda</li>
+              <li>abcdefoausdkajbsda</li>
+              <li>abcdefoausdkajbsda</li>
+            </ul>
+          </Profile>
         </div>
       </div>
 
