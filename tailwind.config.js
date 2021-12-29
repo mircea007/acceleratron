@@ -5,11 +5,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'classified': "url('/classified.png')",
+      },
       animation: {
-        tilt: 'tilt 8s infinite linear',
+        'tilt': 'tilt 8s infinite linear',
       },
       keyframes: {
-        tilt: {
+        'tilt': {
           '0%, 50%, 100%': {
             'transform': 'rotate(0deg) translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))',
           },

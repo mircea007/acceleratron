@@ -5,7 +5,7 @@ import Particles from 'react-tsparticles'
 import WaveSplit from '../components/WaveSplit.jsx'
 import Profile from '../components/Profile.jsx'
 
-import { OrizTimeLine, VertTimeLine, TreeTimeLine } from '../components/TimeLine.jsx'
+import { OrizTimeLine, TreeTimeLine } from '../components/TimeLine.jsx'
 import { DownloadButton, BoringButton, BigButton, GitHubButton } from '../components/Buttons.jsx'
 import { networkParticleConfig, snowParticleConfig, hexagonParticleConfig } from '../components/ParticleConfigs.js'
 
@@ -96,7 +96,7 @@ export default function Home() {
                   <p className="lorem-ipsum text-lg">Aliqua ea ut pariatur nostrud mollit in occaecat proident in voluptate ut in veniam sit mollit aute irure ea voluptate laborum eu commodo deserunt.</p>
                 </div>),
               ],
-              (<h3 className="text-4xl">2. Educational Platform</h3>),
+              (<h3 className="text-5xl">2. Educational Platform</h3>),
               [
                 (<div className="flex flex-col gap-2">
                   <h4 className="text-4xl">Cache questions</h4>
@@ -115,6 +115,27 @@ export default function Home() {
                   <p className="lorem-ipsum text-lg">Aliqua ea ut pariatur nostrud mollit in occaecat proident in voluptate ut in veniam sit mollit aute irure ea voluptate laborum eu commodo deserunt.</p>
                 </div>),
               ],
+              (<h3 className="text-5xl">3. Total World Domination</h3>),
+              (<TreeTimeLine className="classified-overlay font-mono" tree={[
+                (<div className="flex flex-col gap-2">
+                  <h4 className="text-4xl classified">-------------</h4>
+                  <p className="classified text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices magna nec ipsum sagittis, non dictum ex gravida.</p>
+                </div>),
+                [
+                  (<div className="flex flex-col gap-2">
+                    <h4 className="text-4xl classified">---------------</h4>
+                    <p className="classified text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices magna nec ipsum sagittis, non dictum ex gravida. Praesent accumsan, velit vitae pretium laoreet, leo eros ultrices odio, vitae feugiat urna felis at nisi. Vivamus nulla lacus, auctor quis lectus vel, egestas dignissim ligula. Nullam gravida lacus eros, non consectetur tortor rhoncus et. Etiam id viverra augue. Nulla eleifend nulla vel varius lacinia. Curabitur luctus magna ut lorem pharetra, nec porttitor metus ullamcorper. </p>
+                  </div>),
+                ],
+                (<div className="flex flex-col gap-2">
+                  <h4 className="text-4xl classified">-------------------------</h4>
+                  <p className="classified text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices magna nec ipsum sagittis, non dictum ex gravida.</p>
+                </div>),
+                (<div className="flex flex-col gap-2">
+                  <h4 className="text-4xl classified">---------------------</h4>
+                  <p className="classified text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices magna nec ipsum sagittis, non dictum ex gravida.</p>
+                </div>),
+              ]} />),
             ]}/>
           </div>
           <WaveSplit className="h-[15vh] w-full translate-y-px" />

@@ -6,6 +6,15 @@
   .link {
     @apply text-blue-600 hover:italic;
   }
+  .lorem-ipsum {
+    @apply underline decoration-dotted decoration-red-700;
+  }
+  .classified {
+    @apply max-w-max text-gray-200 bg-gray-200;
+  }
+  .classified-overlay {
+    @apply relative after:bg-classified after:bg-cover after:bg-center after:absolute after:inset-0;
+  }
 }
 
 @layer components {

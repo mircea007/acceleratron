@@ -53,27 +53,38 @@ export function MergeLineSVG( props ){
 }
 
 export function TreeTimeLine( props ){
-  console.log(props.tree);
-
+  const pairs = props.tree.map((elem) => {
+    var isSubTree, mapped
+    
+    if( Array.isArray(elem) )
+      mapped = (<TreeTimeLine tree={elem}/>)
+    else
+      mapped = elem
+    
+    isSubTree = (mapped.type == TreeTimeLine)
+    
+    return [mapped, isSubTree]
+  })
+  
   return (
     <div className={"flex flex-col " + props.className}>
       {
-        props.tree.map((elem) => (
+        pairs.map((pair) => (
           <div className="flex flex-row gap-16">
             <div className="flex flex-col w-0 items-center">
-              {Array.isArray(elem) ? null : <PlusCircleIcon className="flex-shrink-0 h-6 stroke-current text-blue-600 scale-110" />}
+              {pair[1] ? null : <PlusCircleIcon className="flex-shrink-0 h-6 stroke-current text-blue-600 scale-110" />}
               <div className="w-0.5 h-full bg-blue-600"/>
             </div>
             {
-              Array.isArray(elem) ? (
+              pair[1] ? (
                 <div className="">
                   <MergeLineSVG className="w-16 h-24 text-blue-600 stroke-current -translate-x-16"/>
-                  <TreeTimeLine tree={elem} />
+                  {pair[0]}
                   <MergeLineSVG className="w-16 h-24 text-blue-600 stroke-current -translate-x-16 -scale-y-100"/>
                 </div>
               ) : (
                 <div className="pb-4"> {/* padding because the blue line has to touch the next section */}
-                  {elem}
+                  {pair[0]}
                 </div>
               )
             }
