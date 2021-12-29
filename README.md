@@ -6,6 +6,6 @@ This is the source code for the webpage dedicated for the [Acceleratron](https:/
 
 * __RESPONSIVE__
 * hero section text
-* roadmap
-* footer
-* make timeline component look better
+* roadmap text
+* explaining section
+* automatic browser detection

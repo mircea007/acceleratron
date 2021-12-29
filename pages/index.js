@@ -33,9 +33,10 @@ export default function Home() {
             <p className="text-white text-lg z-10 text-justify">
               Lorem ipsum veniam nisi dolore culpa in ut sit ullamco nulla mollit eiusmod non ut anim anim magna deserunt dolore laborum ea dolore deserunt quis est sit veniam sint ut sint culpa ut eu ullamco enim sunt ea qui quis.
             </p>
+
             <div className="mt-4 flex flex-row justify-center gap-4">
-              <BigButton className="flex-shrink-0" browser="Chrome" version={extenstionVersion} download="https://chrome.google.com/webstore/category/extensions" github="https://github.com/mircea007/acceleratron" />
-              <BoringButton className="flex-shrink-0" link="">Learn More</BoringButton>
+              <BigButton className="flex-shrink-0" browser="Chrome" version={extenstionVersion} store="https://chrome.google.com/webstore/category/extensions" github="https://github.com/mircea007/acceleratron" downloads="#downloads" />
+              <BoringButton className="flex-shrink-0" link="#explaining-section">Learn More</BoringButton>
             </div>
           </div>
         </div>
@@ -43,7 +44,7 @@ export default function Home() {
       </div>
       
       {/* explaining section */}
-      <h2 className="text-6xl w-full px-10 pt-6 pb-4 text-white bg-black">About the YouTube extension</h2>
+      <h2 id="explaining-section" className="text-6xl w-full px-10 pt-6 pb-4 text-white bg-black">About the YouTube extension</h2>
       <OrizTimeLine className="w-full p-16 bg-black">
         <div className="flex flex-row justify-between w-full pt-4 gap-4" imgUrl="https://picsum.photos/960/540">
           <div className="text-2xl text-justify text-white">
@@ -96,25 +97,23 @@ export default function Home() {
                   <p className="lorem-ipsum text-lg">Aliqua ea ut pariatur nostrud mollit in occaecat proident in voluptate ut in veniam sit mollit aute irure ea voluptate laborum eu commodo deserunt.</p>
                 </div>),
               ],
+
               (<h3 className="text-5xl">2. Educational Platform</h3>),
               [
                 (<div className="flex flex-col gap-2">
-                  <h4 className="text-4xl">Cache questions</h4>
+                  <h4 className="text-4xl">A web platform with with embedded YT videos</h4>
                   <p className="lorem-ipsum text-lg">Aliqua ea ut pariatur nostrud mollit in occaecat proident in voluptate ut in veniam sit mollit aute irure ea voluptate laborum eu commodo deserunt.</p>
                 </div>),
                 (<div className="flex flex-col gap-2">
-                  <h4 className="text-4xl">Add other websites</h4>
+                  <h4 className="text-4xl">Gamified learning</h4>
                   <p className="lorem-ipsum text-lg">Aliqua ea ut pariatur nostrud mollit in occaecat proident in voluptate ut in veniam sit mollit aute irure ea voluptate laborum eu commodo deserunt.</p>
                 </div>),
                 (<div className="flex flex-col gap-2">
-                  <h4 className="text-4xl">User generated questions</h4>
-                  <p className="lorem-ipsum text-lg">Aliqua ea ut pariatur nostrud mollit in occaecat proident in voluptate ut in veniam sit mollit aute irure ea voluptate laborum eu commodo deserunt.</p>
-                </div>),
-                (<div className="flex flex-col gap-2">
-                  <h4 className="text-4xl">Question voting and discussions</h4>
+                  <h4 className="text-4xl">Learn whatever you want</h4>
                   <p className="lorem-ipsum text-lg">Aliqua ea ut pariatur nostrud mollit in occaecat proident in voluptate ut in veniam sit mollit aute irure ea voluptate laborum eu commodo deserunt.</p>
                 </div>),
               ],
+
               (<h3 className="text-5xl">3. Total World Domination</h3>),
               (<TreeTimeLine className="classified-overlay font-mono" tree={[
                 (<div className="flex flex-col gap-2">
@@ -155,6 +154,7 @@ export default function Home() {
               <li>age: 19 years old</li>
             </ul>
           </Profile>
+
           <Profile name="Mircea Rebengiuc" role="Co-Founder" reverse={true} img="https://avatars.githubusercontent.com/u/50020158?v=4">
             <ul className="px-8 list-disc list-inside">
               <li>Participated at international contests for Informatics and Physics</li>
@@ -168,7 +168,7 @@ export default function Home() {
       </div>
 
       {/* download section */}
-      <div className="w-full h-[80vh] relative flex flex-row justify-center items-center">
+      <div id="downloads" className="w-full h-[80vh] relative flex flex-row justify-center items-center">
         <WaveSplit className="h-[15vh] w-full absolute top-0 z-10 -scale-100" />
         <Particles id="download-section-particles" className="absolute inset-0" params={downloadSectionConfig} init={particlesInit} loaded={particlesLoaded}/>
         <div className="text-white z-10">
@@ -188,8 +188,8 @@ export default function Home() {
               <h3 className="text-3xl mb-4">Contribute on GitHub:</h3>
               
               <div className="flex flex-col gap-2">
-                <GitHubButton link="" version={extenstionVersion}>Browser Extenstion</GitHubButton>
-                <GitHubButton link="" version={websiteVersion}>Web Site</GitHubButton>
+                <GitHubButton link="https://github.com/Tiberiu02/Acceleratron"  version={extenstionVersion}>Browser Extenstion</GitHubButton>
+                <GitHubButton link="https://github.com/mircea_007/acceleratron" version={websiteVersion}>Web Site</GitHubButton>
               </div>
             </div>
           </div>
