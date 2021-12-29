@@ -4,6 +4,7 @@ This is the source code for the webpage dedicated for the [Acceleratron](https:/
 
 ## TODO LIST
 
+* __RESPONSIVE__
 * hero section text
 * roadmap
 * footer

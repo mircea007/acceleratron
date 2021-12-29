@@ -1,9 +1,11 @@
 import Particles from 'react-tsparticles'
-import Card from '../components/Card.jsx'
-import RandomPic from '../components/RandomPic.jsx'
-import TimeLine from '../components/TimeLine.jsx'
+
+//import Card from '../components/Card.jsx'
+//import RandomPic from '../components/RandomPic.jsx'
 import WaveSplit from '../components/WaveSplit.jsx'
 import Profile from '../components/Profile.jsx'
+
+import { OrizTimeLine, VertTimeLine, TreeTimeLine } from '../components/TimeLine.jsx'
 import { DownloadButton, BoringButton, BigButton, GitHubButton } from '../components/Buttons.jsx'
 import { networkParticleConfig, snowParticleConfig, hexagonParticleConfig } from '../components/ParticleConfigs.js'
 
@@ -42,7 +44,7 @@ export default function Home() {
       
       {/* explaining section */}
       <h2 className="text-6xl w-full px-10 pt-6 pb-4 text-white bg-black">About the YouTube extension</h2>
-      <TimeLine className="w-full p-16 bg-black">
+      <OrizTimeLine className="w-full p-16 bg-black">
         <div className="flex flex-row justify-between w-full pt-4 gap-4" imgUrl="https://picsum.photos/960/540">
           <div className="text-2xl text-justify text-white">
             When you watch a youtube video, a "questions" button will appear below your video.
@@ -65,16 +67,58 @@ export default function Home() {
             When the quiz is over you will get your score and a report of your answers.
           </div>
         </div>
-      </TimeLine>
+      </OrizTimeLine>
       
       {/* roadmap section */}
-      <div className="w-full h-screen relative flex flex-row justify-center items-center bg-gray-600">
-        <WaveSplit className="h-[15vh] w-full absolute top-0 z-10 -translate-y-px -scale-100" />
+      <div className="w-full relative">
         <Particles id="roadmap-section-particles" className="absolute inset-0 " params={roadmapSectionConfig} init={particlesInit} loaded={particlesLoaded}/>
-        <div className="text-white z-10">
-          <h2 className="text-8xl text-center font-semibold mb-10">Roadmap</h2>
+        <div className="flex flex-col w-full">
+          <WaveSplit className="h-[15vh] w-full -translate-y-px -scale-100" />
+          <div className="text-white z-10 m-8">
+            <h2 className="text-8xl text-center font-semibold mb-10">Roadmap</h2>
+            <TreeTimeLine className="mt-10" tree={[
+              (<h3 className="text-5xl">1. The Browser Extension</h3>),
+              [
+                (<div className="flex flex-col gap-2">
+                  <h4 className="text-4xl">Cache questions</h4>
+                  <p className="lorem-ipsum text-lg">Aliqua ea ut pariatur nostrud mollit in occaecat proident in voluptate ut in veniam sit mollit aute irure ea voluptate laborum eu commodo deserunt.</p>
+                </div>),
+                (<div className="flex flex-col gap-2">
+                  <h4 className="text-4xl">Add other websites</h4>
+                  <p className="lorem-ipsum text-lg">Aliqua ea ut pariatur nostrud mollit in occaecat proident in voluptate ut in veniam sit mollit aute irure ea voluptate laborum eu commodo deserunt.</p>
+                </div>),
+                (<div className="flex flex-col gap-2">
+                  <h4 className="text-4xl">User generated questions</h4>
+                  <p className="lorem-ipsum text-lg">Aliqua ea ut pariatur nostrud mollit in occaecat proident in voluptate ut in veniam sit mollit aute irure ea voluptate laborum eu commodo deserunt.</p>
+                </div>),
+                (<div className="flex flex-col gap-2">
+                  <h4 className="text-4xl">Question voting and discussions</h4>
+                  <p className="lorem-ipsum text-lg">Aliqua ea ut pariatur nostrud mollit in occaecat proident in voluptate ut in veniam sit mollit aute irure ea voluptate laborum eu commodo deserunt.</p>
+                </div>),
+              ],
+              (<h3 className="text-4xl">2. Educational Platform</h3>),
+              [
+                (<div className="flex flex-col gap-2">
+                  <h4 className="text-4xl">Cache questions</h4>
+                  <p className="lorem-ipsum text-lg">Aliqua ea ut pariatur nostrud mollit in occaecat proident in voluptate ut in veniam sit mollit aute irure ea voluptate laborum eu commodo deserunt.</p>
+                </div>),
+                (<div className="flex flex-col gap-2">
+                  <h4 className="text-4xl">Add other websites</h4>
+                  <p className="lorem-ipsum text-lg">Aliqua ea ut pariatur nostrud mollit in occaecat proident in voluptate ut in veniam sit mollit aute irure ea voluptate laborum eu commodo deserunt.</p>
+                </div>),
+                (<div className="flex flex-col gap-2">
+                  <h4 className="text-4xl">User generated questions</h4>
+                  <p className="lorem-ipsum text-lg">Aliqua ea ut pariatur nostrud mollit in occaecat proident in voluptate ut in veniam sit mollit aute irure ea voluptate laborum eu commodo deserunt.</p>
+                </div>),
+                (<div className="flex flex-col gap-2">
+                  <h4 className="text-4xl">Question voting and discussions</h4>
+                  <p className="lorem-ipsum text-lg">Aliqua ea ut pariatur nostrud mollit in occaecat proident in voluptate ut in veniam sit mollit aute irure ea voluptate laborum eu commodo deserunt.</p>
+                </div>),
+              ],
+            ]}/>
+          </div>
+          <WaveSplit className="h-[15vh] w-full translate-y-px" />
         </div>
-        <WaveSplit className="h-[15vh] w-full absolute bottom-0 z-10 translate-y-px" />
       </div>
       
       {/* team section */}

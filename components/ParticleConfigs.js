@@ -160,7 +160,7 @@ const hexagonParticleConfig = {
     }
   },
   "background": {
-    "color": "#000"
+    "color": bgcol
   },
   "detectRetina": true,
   "emitters": {
