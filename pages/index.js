@@ -5,6 +5,7 @@ import TimeLine from '../components/TimeLine.jsx'
 import WaveSplit from '../components/WaveSplit.jsx'
 import Profile from '../components/Profile.jsx'
 import { DownloadButton, BoringButton, BigButton, GitHubButton } from '../components/Buttons.jsx'
+import { networkParticleConfig, snowParticleConfig, hexagonParticleConfig } from '../components/ParticleConfigs.js'
 
 export default function Home() {
   const extenstionVersion = "0.0.1"
@@ -12,102 +13,10 @@ export default function Home() {
   
   const particlesInit = (main) => console.log
   const particlesLoaded = (container) => console.log
-  
-  const bgcol = "#111"
-  const fgcol_hero = "#999"
-  const fgcol_download = "#00f0dd"
-  
-  const heroSectionConfig = {
-    "background": {
-      "color": { "value": bgcol },
-      "position": "50% 50%",
-      "repeat": "no-repeat",
-      "size": "cover"
-    },
-    "fullScreen": {
-      "enable": false,
-      "zIndex": -1
-    },
-    "particles": {
-      "links": {
-        "distance": 150,
-        "enable": true,
-        "color": { "value": fgcol_hero }
-      },
-      "move": {
-        "enable": true
-      },
-      "size": {
-        "value": 1
-      },
-      "color": { "value": fgcol_hero }
-    }
-  }
-  
-  const downloadSectionConfig = {
-    "background": {
-      "color": { "value": bgcol },
-      "position": "50% 50%",
-      "repeat": "no-repeat",
-      "size": "cover"
-    },
-    "fullScreen": {
-      "enable": false,
-      "zIndex": -1
-    },
-    "particles": {
-      "color": { "value": fgcol_download },
-      "move": {
-        "attract": {
-          "rotate": {
-            "x": 600,
-            "y": 1200
-          }
-        },
-        "direction": "top",
-        "enable": true,
-        "outModes": {
-          "bottom": "out",
-          "left": "out",
-          "right": "out",
-          "top": "out"
-        }
-      },
-      "number": {
-        "density": {
-          "enable": true
-        },
-        "value": 400
-      },
-      "opacity": {
-        "random": {
-          "enable": true
-        },
-        "value": {
-          "min": 0.1,
-          "max": 1
-        },
-        "animation": {
-          "enable": true,
-          "speed": 1,
-          "minimumValue": 0.1
-        }
-      },
-      "size": {
-        "random": {
-          "enable": true
-        },
-        "value": {
-          "min": 1,
-          "max": 4
-        },
-        "animation": {
-          "speed": 40,
-          "minimumValue": 0.1
-        }
-      }
-    }
-  }
+    
+  const heroSectionConfig = networkParticleConfig
+  const downloadSectionConfig = snowParticleConfig
+  const roadmapSectionConfig = hexagonParticleConfig
 
   return (
     <div className="main font-sans scroll-smooth flex flex-col items-center bg-black"> {/* page container */}
@@ -120,9 +29,7 @@ export default function Home() {
           <div className="max-w-2xl flex flex-col gap-4 p-8">
             <h1 className="w-full text-center pb-8 text-white text-8xl font-bold">Acceleratron</h1>
             <p className="text-white text-lg z-10 text-justify">
-              <span className="opacity-60"> Youtube is one of the best platforms for educational content but unfortunately it was not designed for this. </span>
-              This is why we have decided to make this simple browser extension to help you actually remember
-              what you just saw, and not just forget about it five minutes later.
+              Lorem ipsum veniam nisi dolore culpa in ut sit ullamco nulla mollit eiusmod non ut anim anim magna deserunt dolore laborum ea dolore deserunt quis est sit veniam sint ut sint culpa ut eu ullamco enim sunt ea qui quis.
             </p>
             <div className="mt-4 flex flex-row justify-center gap-4">
               <BigButton className="flex-shrink-0" browser="Chrome" version={extenstionVersion} download="https://chrome.google.com/webstore/category/extensions" github="https://github.com/mircea007/acceleratron" />
@@ -162,11 +69,12 @@ export default function Home() {
       
       {/* roadmap section */}
       <div className="w-full h-screen relative flex flex-row justify-center items-center bg-gray-600">
-        <WaveSplit className="h-[15vh] w-full absolute top-0 z-10 -scale-100" />
+        <WaveSplit className="h-[15vh] w-full absolute top-0 z-10 -translate-y-px -scale-100" />
+        <Particles id="roadmap-section-particles" className="absolute inset-0 " params={roadmapSectionConfig} init={particlesInit} loaded={particlesLoaded}/>
         <div className="text-white z-10">
           <h2 className="text-8xl text-center font-semibold mb-10">Roadmap</h2>
         </div>
-        <WaveSplit className="h-[15vh] w-full absolute bottom-0 z-10" />
+        <WaveSplit className="h-[15vh] w-full absolute bottom-0 z-10 translate-y-px" />
       </div>
       
       {/* team section */}
